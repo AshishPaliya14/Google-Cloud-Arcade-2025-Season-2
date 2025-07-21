@@ -43,7 +43,6 @@ curl -O https://github.com/Techcps/Google-Cloud-Skills-Boost/blob/main/Cloud%20S
 gsutil cp kitten.png gs://$PROJECT_ID/kitten.png
 
 gsutil iam ch allUsers:objectViewer gs://$PROJECT_ID
-
 echo
 echo -e "\e[41;97m🎉${WHITE}${BOLD} Congratulations for completing the Lab! 🎉 \e[0m"
 echo
