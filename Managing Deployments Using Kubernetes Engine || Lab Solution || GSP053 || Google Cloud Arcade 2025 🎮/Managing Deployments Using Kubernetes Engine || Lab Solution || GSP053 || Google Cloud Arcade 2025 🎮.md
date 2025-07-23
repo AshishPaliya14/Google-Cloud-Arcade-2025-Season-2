@@ -7,9 +7,6 @@
 ### ⚙️ Run the Following Commands in Cloud Shell
 
 ```
-Enter REGION=
-```
-```
 #!/bin/bash
 
 # Bright Foreground Colors
