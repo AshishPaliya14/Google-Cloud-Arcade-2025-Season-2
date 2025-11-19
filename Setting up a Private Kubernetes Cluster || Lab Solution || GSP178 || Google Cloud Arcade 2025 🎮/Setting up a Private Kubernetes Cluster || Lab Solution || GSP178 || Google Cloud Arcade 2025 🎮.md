@@ -67,8 +67,8 @@ gcloud beta container clusters create private-cluster \
 
 echo
 echo "${GREEN_TEXT}Private cluster created successfully!${RESET_FORMAT}"
-echo
 
+echo
 echo "${BLUE_TEXT}${BOLD_TEXT}Step 3: Creating a source instance...${RESET_FORMAT}"
 echo
 
@@ -80,8 +80,9 @@ NAT_IAP=$(gcloud compute instances describe source-instance --zone=$ZONE | grep 
 
 echo
 echo "${GREEN_TEXT}Source instance created with NAT IP: ${NAT_IAP}${RESET_FORMAT}"
-echo
 
+
+echo
 echo "${BLUE_TEXT}${BOLD_TEXT}Step 4: Updating the private cluster to allow master-authorized networks...${RESET_FORMAT}"
 echo
 
