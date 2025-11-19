@@ -62,7 +62,7 @@ read -p "${YELLOW_TEXT}${BOLD_TEXT}Enter REGION3: ${RESET_FORMAT}" REGION3
 export REGION1 REGION2 REGION3
 
 # Authentication and Configuration
-section_header "Authentication and Configuration"
+echo "${YELLOW_TEXT}${BOLD_TEXT}Authentication and Configuration ${RESET_FORMAT}"
 echo "${BLUE_TEXT}${BOLD_TEXT}Setting up project configuration...${RESET_FORMAT}"
 (gcloud auth list > /dev/null 2>&1) & spinner
 echo
@@ -75,13 +75,13 @@ export REGION=$(gcloud compute project-info describe --format="value(commonInsta
 task_complete "Project configuration"
 
 # Network Creation
-section_header "Creating Custom Network"
+echo "${YELLOW_TEXT}${BOLD_TEXT}Creating Custom Network ${RESET_FORMAT}"
 echo "${BLUE_TEXT}${BOLD_TEXT}Creating taw-custom-network...${RESET_FORMAT}"
 (gcloud compute networks create taw-custom-network --subnet-mode custom > /dev/null 2>&1) & spinner
 task_complete "Network creation"
 
 # Subnet Creation
-section_header "Creating Subnets"
+echo "${YELLOW_TEXT}${BOLD_TEXT}Creating Subnets ${RESET_FORMAT}"
 echo "${BLUE_TEXT}${BOLD_TEXT}Creating subnets in specified regions...${RESET_FORMAT}"
 
 echo "${YELLOW_TEXT}Creating subnet-$REGION1 in $REGION1...${RESET_FORMAT}"
@@ -111,7 +111,7 @@ echo "${BLUE_TEXT}${BOLD_TEXT}Listing all created subnets...${RESET_FORMAT}"
 gcloud compute networks subnets list --network taw-custom-network
 
 # Firewall Rules
-section_header "Configuring Firewall Rules"
+echo "${YELLOW_TEXT}${BOLD_TEXT}Configuring Firewall Rules ${RESET_FORMAT}"
 echo "${BLUE_TEXT}${BOLD_TEXT}Setting up firewall rules...${RESET_FORMAT}"
 
 echo "${YELLOW_TEXT}Creating HTTP rule...${RESET_FORMAT}"
