@@ -2,34 +2,14 @@
 
 # Manage Storage Configuration using gsutil || Lab Solution || Google Cloud Arcade 2025 🎮
 
+## Subscribe : "Learn With Ashish" [![Subscribe on YouTube](https://img.shields.io/badge/-Subscribe%20on%20YouTube-FF0000?style=for-thebadge&logo=youtube&logoColor=white&labelColor=FF0000)](https://www.youtube.com/channel/UChSkWopRk1ErP2i0k4aa0KQ)   
+
+
 ## 💡 Solution here
 
 ### ⚙️ Run the Following Commands in Cloud Shell
 
 ```
-#!/bin/bash
-
-# Bright Foreground Colors
-BLACK_TEXT=$'\033[0;90m'
-RED_TEXT=$'\033[0;91m'
-GREEN_TEXT=$'\033[0;92m'
-YELLOW_TEXT=$'\033[0;93m'
-BLUE_TEXT=$'\033[0;94m'
-MAGENTA_TEXT=$'\033[0;95m'
-CYAN_TEXT=$'\033[0;96m'
-WHITE_TEXT=$'\033[0;97m'
-
-NO_COLOR=$'\033[0m'
-RESET_FORMAT=$'\033[0m'
-BOLD_TEXT=$'\033[1m'
-UNDERLINE_TEXT=$'\033[4m'
-
-# Displaying start message
-echo
-echo "${CYAN_TEXT}${BOLD_TEXT}╔════════════════════════════════════════════════════════╗${RESET_FORMAT}"
-echo "${CYAN_TEXT}${BOLD_TEXT}|                      LearnWithAshish                   |${RESET_FORMAT}"
-echo "${CYAN_TEXT}${BOLD_TEXT}╚════════════════════════════════════════════════════════╝${RESET_FORMAT}"
-echo
 # Step 1: Get the sample code and set variables
 git clone https://github.com/GoogleCloudPlatform/training-data-analyst
 cd training-data-analyst/blogs
@@ -59,11 +39,6 @@ gsutil -m acl set -R -a public-read gs://${BUCKET}
 
 # Step 7: Copy with different storage class (Nearline)
 gsutil cp -s nearline ghcn/ghcn_on_bq.ipynb gs://${BUCKET}
-echo
-echo -e "\e[41;97m🎉${WHITE}${BOLD} Congratulations for completing the Lab! 🎉 \e[0m"
-echo
-echo "📺 Subscribe to the channel: https://www.youtube.com/channel/UChSkWopRk1ErP2i0k4aa0KQ"
-echo
 
 ```
 
